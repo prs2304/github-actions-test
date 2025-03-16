@@ -33,7 +33,7 @@ jobs:
           AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query "Account" --output text)
           IMAGE_NAME="github-test"
           IMAGE_TAG="latest"
-          ECR_REPO="$AWS_ACCOUNT_ID.dkr.ecr.ap-south-1.amazonaws.com/$IMAGE_NAME"
+          ECR_REPO="$AWS_ACCOUNT_ID.dkr.ecr.ap-south-2.amazonaws.com/$IMAGE_NAME"
 
           # Build Docker image
           docker build -t $IMAGE_NAME:$IMAGE_TAG .
